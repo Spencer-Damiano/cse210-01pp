@@ -26,9 +26,10 @@ def play_game(cards):
         print(f'the next card is {two}')
 
         diffrence = one - two
-        if diffrence >= 0 and guess == 'hi' or diffrence < 0 and guess == 'lo':
+        print(diffrence)
+        if diffrence <= 0 and guess == 'hi' or diffrence > 0 and guess == 'lo':
             points += 100
-        elif diffrence >= 0 and guess == 'lo' or diffrence <0 and guess == 'hi':
+        elif diffrence >= 0 and guess == 'hi' or diffrence < 0 and guess == 'lo':
             points -= 75
 
 def main():
